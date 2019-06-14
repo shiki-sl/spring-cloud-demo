@@ -1,0 +1,20 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka/
+  #表明自己希望使用ip地址,且ip地址为127.0.0.1避免走外网ip解析
+#  instance:
+#    prefer-ip-address: true
+#    ip-address: 127.0.0.1
+#    #服务续约间隔
+#    lease-renewal-interval-in-seconds: 30
+#    #服务失效间隔(会被eureka注册中心踢出,服务器宕机会显示down)
+#    lease-expiration-duration-in-seconds: 90
+#  server:
+#    eviction-interval-timer-in-ms: 60000
+#    enable-self-preservation: false
